@@ -51,7 +51,7 @@ export const PersonalInfoSection: React.FC = () => {
               type="text"
               value={info.fullName}
               onChange={(e) => updatePersonalInfo({ fullName: e.target.value })}
-              placeholder="e.g. Alex Morgan"
+              placeholder="e.g. Police Manoj"
               className="w-full pl-9 pr-3 py-2 text-sm border border-border rounded-lg bg-surface focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-primary-text"
             />
           </div>
