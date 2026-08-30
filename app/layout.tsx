@@ -10,18 +10,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Resume Maker — Professional ATS-Friendly Resume Builder',
+  title: 'Resuvana — Professional ATS-Friendly Resume Builder',
   description:
-    'Create polished, ATS-compliant resumes in minutes. Built for college students, fresh graduates, and experienced professionals with live A4 preview, AI writing assistance, and high-quality PDF downloads.',
+    'Create polished, ATS-compliant resumes in minutes with Resuvana. Built for college students, fresh graduates, and experienced professionals with live A4 preview, AI writing assistance, and high-quality PDF downloads.',
   keywords: [
-    'resume maker',
+    'resuvana',
     'ats resume builder',
+    'resume maker',
     'student resume',
     'fresher resume format',
     'professional cv builder',
     'free pdf resume download',
   ],
-  authors: [{ name: 'Resume Maker Team' }],
+  authors: [{ name: 'Resuvana Team' }],
 };
 
 export default function RootLayout({

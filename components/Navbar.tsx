@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-base tracking-tight text-primary-text flex items-center gap-1.5">
-                ResumeMaker
+                Resuvana
                 <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary-light px-1.5 py-0.2 rounded border border-primary/20">
                   ATS READY
                 </span>

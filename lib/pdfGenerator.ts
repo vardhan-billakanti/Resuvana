@@ -1,5 +1,5 @@
 /**
- * PDF Generation Utility for Resume Maker
+ * PDF Generation Utility for Resuvana
  * Generates clean, searchable, watermark-free A4 PDFs with standard naming convention.
  */
 

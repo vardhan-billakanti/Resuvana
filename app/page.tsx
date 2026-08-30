@@ -100,7 +100,7 @@ export default function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
                 <span className="text-xs font-semibold text-secondary-text ml-2">
-                  ResumeMaker Workspace — Live A4 Document
+                  Resuvana Workspace — Live A4 Document
                 </span>
               </div>
               <div className="flex items-center gap-2 text-xs">
@@ -265,7 +265,7 @@ export default function LandingPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-wider text-primary">Simple 3-Step Process</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-primary-text tracking-tight mt-1">
-              How Resume Maker Works
+              How Resuvana Works
             </h2>
             <p className="text-sm text-secondary-text mt-2">
               Guided progression that turns your credentials into a clean, interview-ready document.

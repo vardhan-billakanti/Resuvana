@@ -6,7 +6,24 @@ interface TemplateProps {
 }
 
 export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
-  const { personalInfo, summary, education, experience, internships, skills, projects, certifications, achievements, awards, publications, languages, interests, customSections, settings, enabledSections } = data;
+  const {
+    personalInfo,
+    summary,
+    education,
+    experience,
+    internships,
+    skills,
+    projects,
+    certifications,
+    achievements,
+    awards,
+    publications,
+    languages,
+    interests,
+    customSections,
+    settings,
+    enabledSections,
+  } = data;
 
   const fontClass =
     settings.font === 'merriweather' || settings.font === 'garamond'
@@ -14,12 +31,20 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
       : 'font-sans';
 
   const marginClass =
-    settings.margins === 'compact' ? 'p-8' : settings.margins === 'wide' ? 'p-14' : 'p-10';
+    settings.margins === 'compact' ? 'p-7' : settings.margins === 'wide' ? 'p-12' : 'p-9';
 
   const fontSizeClass =
-    settings.fontSize === 'small' ? 'text-[11px] leading-[1.4]' : settings.fontSize === 'large' ? 'text-[13px] leading-[1.6]' : 'text-[12px] leading-[1.5]';
+    settings.fontSize === 'small'
+      ? 'text-[11px] leading-[1.4]'
+      : settings.fontSize === 'large'
+      ? 'text-[13px] leading-[1.6]'
+      : 'text-[12px] leading-[1.48]';
 
-  const isBlank = !personalInfo.fullName && !summary.summaryText && education.length === 0 && skills.length === 0;
+  const isBlank =
+    !personalInfo.fullName &&
+    !summary.summaryText &&
+    education.length === 0 &&
+    skills.length === 0;
 
   return (
     <div
@@ -27,27 +52,27 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
       id="resume-document"
     >
       {/* Header / Personal Info */}
-      <header className="text-center pb-3 border-b-2 border-gray-800 mb-4 page-break-avoid">
-        <h1 className="text-2xl font-bold uppercase tracking-wide text-black">
+      <header className="text-center pb-3 border-b-2 border-gray-800 mb-3.5 page-break-avoid">
+        <h1 className="text-2xl font-bold uppercase tracking-wide text-black mb-0.5">
           {personalInfo.fullName || 'YOUR FULL NAME'}
         </h1>
-        <p className="text-sm font-medium text-gray-800 mt-0.5">
+        <p className="text-sm font-medium text-gray-800 mb-2">
           {personalInfo.professionalTitle || 'Professional Title / Target Headline'}
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-2 text-xs text-gray-700 mt-2">
+        <div className="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-xs text-gray-700">
           {personalInfo.location ? (
             <span>{personalInfo.location}</span>
           ) : (
             <span className="text-gray-400">City, State, Country</span>
           )}
-          <span>•</span>
+          <span className="text-gray-400">•</span>
           {personalInfo.phone ? (
             <span>{personalInfo.phone}</span>
           ) : (
             <span className="text-gray-400">+1 (555) 000-0000</span>
           )}
-          <span>•</span>
+          <span className="text-gray-400">•</span>
           {personalInfo.email ? (
             <a href={`mailto:${personalInfo.email}`} className="text-gray-900 hover:underline">
               {personalInfo.email}
@@ -57,7 +82,7 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
           )}
           {personalInfo.linkedin && (
             <>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="text-gray-900 hover:underline">
                 LinkedIn
               </a>
@@ -65,7 +90,7 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
           )}
           {personalInfo.github && (
             <>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               <a href={personalInfo.github} target="_blank" rel="noreferrer" className="text-gray-900 hover:underline">
                 GitHub
               </a>
@@ -73,7 +98,7 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
           )}
           {personalInfo.portfolio && (
             <>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               <a href={personalInfo.portfolio} target="_blank" rel="noreferrer" className="text-gray-900 hover:underline">
                 Portfolio
               </a>
@@ -84,27 +109,35 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Professional Summary */}
       {enabledSections.summary && (summary.summaryText || isBlank) && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-1.5">
-            Professional Summary
-          </h2>
-          <p className="text-gray-800 text-justify">
-            {summary.summaryText || (
-              <span className="text-gray-400 italic">
-                Add a concise 2–4 sentence summary highlighting your core strengths, experience, and career focus...
-              </span>
-            )}
-          </p>
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Professional Summary
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content">
+            <p className="text-gray-800 text-justify">
+              {summary.summaryText || (
+                <span className="text-gray-400 italic">
+                  Add a concise 2–4 sentence summary highlighting your core strengths, experience, and career focus...
+                </span>
+              )}
+            </p>
+          </div>
         </section>
       )}
 
       {/* Experience */}
       {enabledSections.experience && experience.length > 0 && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-2">
-            Professional Experience
-          </h2>
-          <div className="space-y-3">
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Professional Experience
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-2.5">
             {experience.map((exp) => (
               <div key={exp.id} className="page-break-avoid">
                 <div className="flex justify-between items-baseline font-bold text-gray-900">
@@ -138,11 +171,14 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Internships */}
       {enabledSections.internships && internships.length > 0 && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-2">
-            Internships & Practical Training
-          </h2>
-          <div className="space-y-3">
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Internships & Practical Training
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-2.5">
             {internships.map((item) => (
               <div key={item.id} className="page-break-avoid">
                 <div className="flex justify-between items-baseline font-bold text-gray-900">
@@ -176,53 +212,61 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Education */}
       {enabledSections.education && (education.length > 0 || isBlank) && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-2">
-            Education
-          </h2>
-          {education.length === 0 ? (
-            <p className="text-xs text-gray-400 italic">Add your university, degree, coursework, and honors...</p>
-          ) : (
-            <div className="space-y-2.5">
-              {education.map((edu) => (
-                <div key={edu.id} className="page-break-avoid">
-                  <div className="flex justify-between items-baseline font-bold text-gray-900">
-                    <span>{edu.institution || 'University / Institution'}</span>
-                    <span className="text-xs font-normal text-gray-700">
-                      {edu.startDate} – {edu.isCurrent ? 'Expected ' : ''}{edu.endDate}
-                    </span>
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Education
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content">
+            {education.length === 0 ? (
+              <p className="text-xs text-gray-400 italic">Add your university, degree, coursework, and honors...</p>
+            ) : (
+              <div className="space-y-2">
+                {education.map((edu) => (
+                  <div key={edu.id} className="page-break-avoid">
+                    <div className="flex justify-between items-baseline font-bold text-gray-900">
+                      <span>{edu.institution || 'University / Institution'}</span>
+                      <span className="text-xs font-normal text-gray-700">
+                        {edu.startDate} – {edu.isCurrent ? 'Expected ' : ''}{edu.endDate}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-baseline text-xs text-gray-800">
+                      <span>
+                        {edu.degree}{edu.fieldOfStudy ? ` in ${edu.fieldOfStudy}` : ''}
+                        {edu.gpa && <span className="font-medium"> | GPA: {edu.gpa}</span>}
+                      </span>
+                      <span className="italic">{edu.location}</span>
+                    </div>
+                    {edu.relevantCoursework && (
+                      <p className="text-xs text-gray-700 mt-0.5">
+                        <span className="font-semibold text-gray-900">Relevant Coursework:</span> {edu.relevantCoursework}
+                      </p>
+                    )}
+                    {edu.academicAchievements && (
+                      <p className="text-xs text-gray-700 mt-0.5">
+                        <span className="font-semibold text-gray-900">Honors:</span> {edu.academicAchievements}
+                      </p>
+                    )}
                   </div>
-                  <div className="flex justify-between items-baseline text-xs text-gray-800">
-                    <span>
-                      {edu.degree}{edu.fieldOfStudy ? ` in ${edu.fieldOfStudy}` : ''}
-                      {edu.gpa && <span className="font-medium"> | GPA: {edu.gpa}</span>}
-                    </span>
-                    <span className="italic">{edu.location}</span>
-                  </div>
-                  {edu.relevantCoursework && (
-                    <p className="text-xs text-gray-700 mt-0.5">
-                      <span className="font-semibold text-gray-900">Relevant Coursework:</span> {edu.relevantCoursework}
-                    </p>
-                  )}
-                  {edu.academicAchievements && (
-                    <p className="text-xs text-gray-700 mt-0.5">
-                      <span className="font-semibold text-gray-900">Honors:</span> {edu.academicAchievements}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </section>
       )}
 
       {/* Projects */}
       {enabledSections.projects && projects.length > 0 && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-2">
-            Key Projects
-          </h2>
-          <div className="space-y-3">
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Key Projects
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-2.5">
             {projects.map((proj) => (
               <div key={proj.id} className="page-break-avoid">
                 <div className="flex justify-between items-baseline font-bold text-gray-900">
@@ -268,32 +312,40 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Skills */}
       {enabledSections.skills && (skills.length > 0 || isBlank) && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-1.5">
-            Skills & Competencies
-          </h2>
-          {skills.length === 0 ? (
-            <p className="text-xs text-gray-400 italic">Add your programming languages, tools, frameworks, and soft skills...</p>
-          ) : (
-            <div className="space-y-1">
-              {skills.map((category) => (
-                <div key={category.id} className="flex flex-wrap text-xs">
-                  <span className="font-bold text-gray-900 min-w-[140px]">{category.categoryName}:</span>
-                  <span className="text-gray-800 flex-1">{category.skills.join(', ')}</span>
-                </div>
-              ))}
-            </div>
-          )}
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Skills & Competencies
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content">
+            {skills.length === 0 ? (
+              <p className="text-xs text-gray-400 italic">Add your programming languages, tools, frameworks, and soft skills...</p>
+            ) : (
+              <div className="space-y-1">
+                {skills.map((category) => (
+                  <div key={category.id} className="flex flex-wrap text-xs">
+                    <span className="font-bold text-gray-900 min-w-[140px]">{category.categoryName}:</span>
+                    <span className="text-gray-800 flex-1">{category.skills.join(', ')}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </section>
       )}
 
       {/* Certifications */}
       {enabledSections.certifications && certifications.length > 0 && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-1.5">
-            Certifications
-          </h2>
-          <div className="space-y-1">
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Certifications
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-1">
             {certifications.map((cert) => (
               <div key={cert.id} className="flex justify-between items-baseline text-xs">
                 <span className="text-gray-900">
@@ -309,11 +361,14 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Achievements & Awards */}
       {enabledSections.achievements && achievements.length > 0 && (
-        <section className="mb-4 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-1.5">
-            Achievements & Honors
-          </h2>
-          <div className="space-y-1.5">
+        <section className="mb-3.5 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Achievements & Honors
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-1.5">
             {achievements.map((ach) => (
               <div key={ach.id} className="text-xs">
                 <div className="flex justify-between font-semibold text-gray-900">
@@ -330,11 +385,14 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
 
       {/* Languages & Interests */}
       {(enabledSections.languages || enabledSections.interests) && (languages.length > 0 || interests.length > 0) && (
-        <section className="mb-2 page-break-avoid">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-1.5">
-            Additional Information
-          </h2>
-          <div className="space-y-1 text-xs">
+        <section className="mb-3 page-break-avoid">
+          <div className="section-heading mb-1">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+              Additional Information
+            </h2>
+          </div>
+          <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+          <div className="section-content space-y-1 text-xs">
             {enabledSections.languages && languages.length > 0 && (
               <div>
                 <span className="font-bold text-gray-900">Languages: </span>
@@ -357,11 +415,14 @@ export const TemplateClassicAts: React.FC<TemplateProps> = ({ data }) => {
       {enabledSections.customSections && customSections.length > 0 && (
         <>
           {customSections.map((sec) => (
-            <section key={sec.id} className="mb-4 page-break-avoid">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-black border-b border-gray-400 pb-0.5 mb-2">
-                {sec.sectionTitle}
-              </h2>
-              <div className="space-y-2">
+            <section key={sec.id} className="mb-3.5 page-break-avoid">
+              <div className="section-heading mb-1">
+                <h2 className="text-xs font-bold uppercase tracking-wider text-black">
+                  {sec.sectionTitle}
+                </h2>
+              </div>
+              <div className="section-divider h-[1px] bg-gray-400 w-full mb-2" />
+              <div className="section-content space-y-2">
                 {sec.entries.map((entry) => (
                   <div key={entry.id} className="text-xs">
                     <div className="flex justify-between font-bold text-gray-900">

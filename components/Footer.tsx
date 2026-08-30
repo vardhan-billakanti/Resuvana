@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
               <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xs">
                 <FileText className="w-4 h-4" />
               </div>
-              <span className="font-extrabold text-sm text-primary-text">ResumeMaker</span>
+              <span className="font-extrabold text-sm text-primary-text">Resuvana</span>
             </div>
             <p className="text-xs leading-relaxed text-secondary-text">
               Engineered for students, graduates, and professionals to create clean, ATS-compliant resumes with zero formatting friction.
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-[11px]">
-          <p>© {new Date().getFullYear()} Resume Maker. Built for students & professionals.</p>
+          <p>© {new Date().getFullYear()} Resuvana. Built for students & professionals.</p>
           <div className="flex items-center gap-4">
             <Link href="/builder" className="hover:text-primary">
               Builder

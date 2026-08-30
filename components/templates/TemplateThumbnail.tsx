@@ -19,15 +19,17 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] border-b border-gray-400 pb-0.5 text-black">Summary</div>
-          <p className="text-[5.5px] text-gray-700 mt-0.5 line-clamp-2 leading-normal">
+          <div className="font-bold uppercase text-[6px] text-black">Summary</div>
+          <div className="h-[0.5px] bg-gray-400 w-full my-0.5" />
+          <p className="text-[5.5px] text-gray-700 line-clamp-2 leading-normal">
             Detail-oriented Computer Science undergraduate with hands-on expertise in full-stack web development and REST APIs.
           </p>
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] border-b border-gray-400 pb-0.5 text-black">Education</div>
-          <div className="flex justify-between font-bold text-[5.8px] text-gray-900 mt-0.5">
+          <div className="font-bold uppercase text-[6px] text-black">Education</div>
+          <div className="h-[0.5px] bg-gray-400 w-full my-0.5" />
+          <div className="flex justify-between font-bold text-[5.8px] text-gray-900">
             <span>HIT &amp; Science</span>
             <span className="font-normal text-gray-500">2022 – 2026</span>
           </div>
@@ -35,15 +37,17 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] border-b border-gray-400 pb-0.5 text-black">Technical Skills</div>
-          <div className="text-[5.2px] text-gray-800 mt-0.5">
+          <div className="font-bold uppercase text-[6px] text-black">Technical Skills</div>
+          <div className="h-[0.5px] bg-gray-400 w-full my-0.5" />
+          <div className="text-[5.2px] text-gray-800">
             <span className="font-bold">Languages:</span> Python, Java, TypeScript, SQL, C++
           </div>
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] border-b border-gray-400 pb-0.5 text-black">Projects</div>
-          <div className="font-bold text-[5.8px] text-gray-900 mt-0.5">Distributed Task Queue Engine</div>
+          <div className="font-bold uppercase text-[6px] text-black">Projects</div>
+          <div className="h-[0.5px] bg-gray-400 w-full my-0.5" />
+          <div className="font-bold text-[5.8px] text-gray-900">Distributed Task Queue Engine</div>
           <div className="text-[5.2px] text-gray-600 line-clamp-1">• Built asynchronous Redis worker pool processing 2,500 jobs/min.</div>
         </div>
       </div>
@@ -68,21 +72,17 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] text-blue-600 flex items-center gap-1">
-            <span>Summary</span>
-            <span className="flex-1 h-[0.5px] bg-gray-200" />
-          </div>
-          <p className="text-[5.5px] text-gray-700 mt-0.5 line-clamp-2 leading-normal">
+          <div className="font-bold uppercase text-[6px] text-blue-600">Summary</div>
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <p className="text-[5.5px] text-gray-700 line-clamp-2 leading-normal">
             Motivated developer focused on building scalable, modern web services and reliable software architectures.
           </p>
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] text-blue-600 flex items-center gap-1">
-            <span>Skills</span>
-            <span className="flex-1 h-[0.5px] bg-gray-200" />
-          </div>
-          <div className="flex flex-wrap gap-1 mt-0.5">
+          <div className="font-bold uppercase text-[6px] text-blue-600">Skills</div>
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <div className="flex flex-wrap gap-1">
             <span className="bg-slate-100 px-1 py-0.2 rounded text-[4.8px] font-medium text-slate-700">TypeScript</span>
             <span className="bg-slate-100 px-1 py-0.2 rounded text-[4.8px] font-medium text-slate-700">React.js</span>
             <span className="bg-slate-100 px-1 py-0.2 rounded text-[4.8px] font-medium text-slate-700">Node.js</span>
@@ -92,11 +92,9 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[6px] text-blue-600 flex items-center gap-1">
-            <span>Internship</span>
-            <span className="flex-1 h-[0.5px] bg-gray-200" />
-          </div>
-          <div className="flex justify-between font-bold text-[5.8px] text-gray-900 mt-0.5">
+          <div className="font-bold uppercase text-[6px] text-blue-600">Internship</div>
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <div className="flex justify-between font-bold text-[5.8px] text-gray-900">
             <span>Software Intern — Nexora Tech</span>
             <span className="text-[4.8px] bg-blue-50 text-blue-700 px-1 rounded">2024</span>
           </div>
@@ -118,19 +116,22 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
 
         <div className="mt-1">
           <span className="text-[5.5px] font-bold uppercase text-teal-900 bg-teal-50 px-1 py-0.2 rounded">Education</span>
-          <div className="font-bold text-[5.8px] text-gray-950 mt-0.5">B.Tech in Computer Science • HIT &amp; Science</div>
+          <div className="h-[0.5px] bg-teal-100 w-full my-0.5" />
+          <div className="font-bold text-[5.8px] text-gray-950">B.Tech in Computer Science • HIT &amp; Science</div>
           <div className="text-[5.2px] text-teal-800 font-medium">CGPA: 8.7/10.0 • Academic Merit Award</div>
         </div>
 
         <div className="mt-1">
           <span className="text-[5.5px] font-bold uppercase text-teal-900 bg-teal-50 px-1 py-0.2 rounded">Projects</span>
-          <div className="font-bold text-[5.8px] text-gray-950 mt-0.5">Distributed Task Queue Engine (TypeScript, Redis)</div>
+          <div className="h-[0.5px] bg-teal-100 w-full my-0.5" />
+          <div className="font-bold text-[5.8px] text-gray-950">Distributed Task Queue Engine (TypeScript, Redis)</div>
           <div className="text-[5.2px] text-gray-600 line-clamp-1">• Built asynchronous worker pool processing 2,500 jobs/min.</div>
         </div>
 
         <div className="mt-1">
           <span className="text-[5.5px] font-bold uppercase text-teal-900 bg-teal-50 px-1 py-0.2 rounded">Skills</span>
-          <div className="text-[5.2px] text-gray-800 mt-0.5">
+          <div className="h-[0.5px] bg-teal-100 w-full my-0.5" />
+          <div className="text-[5.2px] text-gray-800">
             Python, Java, TypeScript, React.js, PostgreSQL, Docker, Git
           </div>
         </div>
@@ -149,23 +150,26 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900 border-b border-slate-300 pb-0.5">Executive Profile</div>
-          <p className="text-[5.2px] text-slate-700 mt-0.5 line-clamp-2 leading-normal">
+          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900">Executive Profile</div>
+          <div className="h-[0.5px] bg-slate-300 w-full my-0.5" />
+          <p className="text-[5.2px] text-slate-700 line-clamp-2 leading-normal">
             Strategic technical leader with a track record of architecting distributed platforms and mentoring high-performing engineering teams.
           </p>
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900 border-b border-slate-300 pb-0.5">Core Competencies</div>
-          <div className="grid grid-cols-2 gap-1 text-[4.8px] text-slate-700 mt-0.5">
+          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900">Core Competencies</div>
+          <div className="h-[0.5px] bg-slate-300 w-full my-0.5" />
+          <div className="grid grid-cols-2 gap-1 text-[4.8px] text-slate-700">
             <div>• Distributed Systems Architecture</div>
             <div>• Technical Agile Leadership</div>
           </div>
         </div>
 
         <div className="mt-1">
-          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900 border-b border-slate-300 pb-0.5">Leadership Experience</div>
-          <div className="flex justify-between font-bold text-[5.8px] text-slate-950 mt-0.5">
+          <div className="font-bold uppercase text-[5.8px] tracking-wider text-slate-900">Leadership Experience</div>
+          <div className="h-[0.5px] bg-slate-300 w-full my-0.5" />
+          <div className="flex justify-between font-bold text-[5.8px] text-slate-950">
             <span>Engineering Lead — Nexora Systems</span>
             <span className="font-normal text-slate-500">2021 – Present</span>
           </div>
@@ -187,14 +191,16 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
 
         <div className="mt-1">
           <div className="font-bold uppercase text-[5.5px] tracking-widest text-gray-400">About</div>
-          <p className="text-[5.2px] text-gray-700 mt-0.5 line-clamp-2 leading-relaxed">
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <p className="text-[5.2px] text-gray-700 line-clamp-2 leading-relaxed">
             Analytical software engineer with solid foundations in algorithmic design, full-stack systems, and modern APIs.
           </p>
         </div>
 
         <div className="mt-1">
           <div className="font-bold uppercase text-[5.5px] tracking-widest text-gray-400">Experience</div>
-          <div className="flex justify-between font-semibold text-[5.8px] text-gray-900 mt-0.5">
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <div className="flex justify-between font-semibold text-[5.8px] text-gray-900">
             <span>Software Intern — Nexora Tech</span>
             <span className="font-normal text-gray-400">2024</span>
           </div>
@@ -203,7 +209,8 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
 
         <div className="mt-1">
           <div className="font-bold uppercase text-[5.5px] tracking-widest text-gray-400">Skills</div>
-          <div className="text-[5.2px] text-gray-700 mt-0.5">
+          <div className="h-[0.5px] bg-gray-200 w-full my-0.5" />
+          <div className="text-[5.2px] text-gray-700">
             Python, Java, TypeScript, React.js, PostgreSQL, Docker, Git
           </div>
         </div>
@@ -224,21 +231,24 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ templateId
       </div>
 
       <div className="mt-1">
-        <div className="font-bold uppercase text-[5.8px] text-blue-900 border-b border-blue-200 pb-0.2">&gt; Skills Matrix</div>
-        <div className="text-[5px] text-gray-800 mt-0.5 space-y-0.2">
+        <div className="font-bold uppercase text-[5.8px] text-blue-900">&gt; Skills Matrix</div>
+        <div className="h-[0.5px] bg-blue-200 w-full my-0.5" />
+        <div className="text-[5px] text-gray-800 space-y-0.2">
           <div><span className="font-bold text-blue-950 font-mono">Languages:</span> Python, Java, TypeScript, C++, SQL</div>
           <div><span className="font-bold text-blue-950 font-mono">Stack:</span> React, Next.js, Node.js, Docker, Redis</div>
         </div>
       </div>
 
       <div className="mt-1">
-        <div className="font-bold uppercase text-[5.8px] text-blue-900 border-b border-blue-200 pb-0.2">&gt; Key Projects</div>
-        <div className="font-bold text-[5.8px] text-gray-950 mt-0.5">Distributed Task Queue Engine</div>
+        <div className="font-bold uppercase text-[5.8px] text-blue-900">&gt; Key Projects</div>
+        <div className="h-[0.5px] bg-blue-200 w-full my-0.5" />
+        <div className="font-bold text-[5.8px] text-gray-950">Distributed Task Queue Engine</div>
         <div className="text-[5.2px] text-gray-600 line-clamp-1 font-mono">• Redis Streams worker pool processing 2,500 jobs/min.</div>
       </div>
 
       <div className="mt-1">
-        <div className="font-bold uppercase text-[5.8px] text-blue-900 border-b border-blue-200 pb-0.2">&gt; Education</div>
+        <div className="font-bold uppercase text-[5.8px] text-blue-900">&gt; Education</div>
+        <div className="h-[0.5px] bg-blue-200 w-full my-0.5" />
         <div className="text-[5.2px] text-gray-700">B.Tech in CSE (CGPA: 8.7) • HIT &amp; Science (2022–2026)</div>
       </div>
     </div>

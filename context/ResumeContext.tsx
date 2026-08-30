@@ -23,7 +23,7 @@ import {
 } from '@/types/resume';
 import { FICTIONAL_SAMPLE_RESUME, EMPTY_RESUME } from '@/lib/sampleResumes';
 
-const STORAGE_KEY = 'resume_maker_draft_v3';
+const STORAGE_KEY = 'resuvana_resume_draft_v1';
 
 interface CompletenessItem {
   id: string;

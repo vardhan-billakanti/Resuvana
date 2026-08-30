@@ -76,7 +76,7 @@ export default function BuilderPage() {
       const content = event.target?.result as string;
       const success = importJson(content);
       if (!success) {
-        setJsonImportError('Invalid JSON format. Please upload a valid ResumeMaker export file.');
+        setJsonImportError('Invalid JSON format. Please upload a valid Resuvana export file.');
       } else {
         setJsonImportError(null);
       }
