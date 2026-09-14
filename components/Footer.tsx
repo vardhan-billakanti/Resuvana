@@ -105,6 +105,24 @@ export const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
+
+        {/* Creator Attribution */}
+        <div className="mt-6 pt-6 border-t border-border flex flex-col items-center justify-center text-center gap-1.5">
+          <p className="text-xs text-secondary-text font-normal tracking-wide">
+            Designed & Developed by{' '}
+            <a
+              href="https://vardhanbillakanti.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="creator-credit-link"
+            >
+              Billakanti Jaya Vardhan
+            </a>
+          </p>
+          <p className="text-[11px] text-muted-text font-normal tracking-wider">
+            © 2026 · All Rights Reserved
+          </p>
+        </div>
       </div>
     </footer>
   );
